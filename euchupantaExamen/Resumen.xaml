@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="euchupantaExamen.Resumen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label  x:Name="lblconectado"  Text="Usuario Conectado: " FontSize="20"/>
+            <Label  x:Name="lblusuario" Text="" FontSize="20" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Nombre" 
+                           FontSize="20" 
+                           HorizontalTextAlignment="Center"
+                           Grid.Row="0"
+                           Grid.Column="0"/>
+                <Entry x:Name="txtNombre"
+                       HorizontalTextAlignment="Center"
+                           Placeholder="Nombre"
+                           Grid.Row="0"
+                           Grid.Column="1"/>
+                <Label Text="Pago Total" 
+                           FontSize="20" 
+                           HorizontalTextAlignment="Center"
+                           Grid.Row="1"
+                           Grid.Column="0"/>
+                <Entry x:Name="txtPagoTotal"
+                           Placeholder="PagoT"
+                       HorizontalTextAlignment="Center"
+                           Grid.Row="1"
+                           Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

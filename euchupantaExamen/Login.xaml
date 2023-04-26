@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="euchupantaExamen.Login">
+    <ContentPage.Content>
+        <Grid BackgroundColor="Beige" >
+
+            <StackLayout>
+                <Frame BackgroundColor="#192a56" 
+               Padding="24" CornerRadius="10" 
+               BorderColor="White">
+
+                    <Label Text="login Uisrael!" 
+                   HorizontalTextAlignment="Center" 
+                   TextColor="White" 
+                   FontSize="30"/>
+                </Frame>
+                <Frame 
+                   BorderColor="#192a56"
+                   CornerRadius="150"
+                   HeightRequest="100" 
+                   WidthRequest="100"
+                   IsClippedToBounds="True" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" >
+
+                    <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png" 
+                    BackgroundColor="#ffffff"
+                    HeightRequest="150"
+                    WidthRequest="100"/>
+                </Frame>
+                <Frame  CornerRadius="30">
+                <Entry Placeholder="Usuario" 
+                    IsSpellCheckEnabled="True"  
+                    IsTextPredictionEnabled="True" 
+                    IsPassword="False" 
+                    TextColor="Black" 
+                    FontSize="25" 
+                    HorizontalTextAlignment="Center" 
+                    Margin="20" 
+                    x:Name="txtUsuario"/>
+                </Frame>
+                <Frame  CornerRadius="30">
+                    <Entry Placeholder="Contraseña" 
+                    IsPassword="True" 
+                    TextColor="Black" 
+                    FontSize="25" 
+                    HorizontalTextAlignment="Center" 
+                    Margin="20" 
+                    x:Name="txtContraseña"/>
+                </Frame>
+                <Frame BackgroundColor="Beige">
+                    <Button x:Name="btnAceptar" Text="Aceptar" HeightRequest="100" 
+                          WidthRequest="150"  HorizontalOptions="Center" FontSize="25" BackgroundColor="Aqua" CornerRadius="50" Clicked="btnAceptar_Clicked"/>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

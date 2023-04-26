@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="euchupantaExamen.Registro">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Label  x:Name="lblconectado"  Text="Usuario Conectado: " FontSize="20"/>
+            <Label  x:Name="lblusuario" Text="" FontSize="20" />
+            <Label Text="Ventana de inicio! " 
+                       FontSize="20" TextColor="Blue" 
+                       HorizontalTextAlignment="Center"/>
+            <Label  Text="Valor de curao" FontSize="20" />
+            <Label   Text="3000" FontSize="20" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                   
+                </Grid.ColumnDefinitions>
+                <Label Text="Nombre" 
+                           FontSize="20" 
+                           HorizontalTextAlignment="Center"
+                           Grid.Row="0"
+                           Grid.Column="0"/>
+                <Entry x:Name="txtNombre"
+                       HorizontalTextAlignment="Center"
+                           Placeholder="Nombre"
+                           Grid.Row="0"
+                           Grid.Column="1"/>
+                <Label Text="Monto_Inicial" 
+                           FontSize="20" 
+                           HorizontalTextAlignment="Center"
+                           Grid.Row="1"
+                           Grid.Column="0"/>
+                <Entry x:Name="txtMonto"
+                           Placeholder="Montoinicial"
+                           Keyboard="Numeric"
+                           HorizontalTextAlignment="Center"
+                           Grid.Row="1"
+                           Grid.Column="1"/>
+                <Entry x:Name="txtMontoSaldo"
+                           Placeholder="Saldo"
+                           Keyboard="Numeric"
+                           HorizontalTextAlignment="Center"
+                           Grid.Row="1"
+                           Grid.Column="1"/>
+                <Entry x:Name="txtMeses"
+                           Placeholder="Saldo"
+                           Keyboard="Numeric"
+                           HorizontalTextAlignment="Center"
+                           Grid.Row="1"
+                           Grid.Column="1"/>
+                <Label Text="Pago_Mensual" 
+                           FontSize="20" 
+                           HorizontalTextAlignment="Center"
+                           Grid.Row="2"
+                           Grid.Column="0"/>
+                <Entry x:Name="txtPagoMensual"
+                       HorizontalOptions="Center"
+                           Placeholder="PagoMensual"
+                           Grid.Row="2"
+                           Keyboard="Numeric"
+                           Grid.Column="1"/>
+                <Button x:Name="btnCalcular" 
+                            Text="Calcular"
+                        HeightRequest="5"
+                            Clicked="btnCalcular_Clicked" 
+                            Grid.Row="3" 
+                            Grid.Column="0"/>
+                <Entry x:Name="txtcalcular"
+                           Placeholder="Calcular"
+                       HorizontalOptions="Center"
+                           Grid.Row="3"
+                           Grid.Column="1"/>
+                <Button x:Name="btnGuardar"
+                            Text="Guardar"
+                            Clicked="btnGuardar_Clicked"
+                            Grid.Row="4"
+                            Grid.Column="1"/>
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
