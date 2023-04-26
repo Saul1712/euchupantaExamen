@@ -12,13 +12,14 @@ namespace euchupantaExamen
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Resumen : ContentPage
     {
-        public Resumen(string usuario1, string nombre1)
+        public Resumen(string usuario1, string nombre1, string pago)
         {
             InitializeComponent();
             //string usuario;
             //lblusuario.Text = usuario;
             lblusuario.Text = usuario1;
             txtNombre.Text = nombre1;
+            txtPagoTotal.Text = pago;
 
 
         }

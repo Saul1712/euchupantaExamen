@@ -25,40 +25,42 @@ namespace euchupantaExamen
             
             lblusuario.Text = usuario;
             txtMonto.Text = "1000";
-            valorCursoSaldo = valorCurso - valorCursoInicial;
-            valorCuota = valorCursoSaldo/3;
-            valorCuotaFinal=valorCuota+((valorCuota*valorInteres)/100);
+            
 
             //llenar input
             txtMontoSaldo.Text = valorCursoSaldo.ToString();
             txtPagoMensual.Text= valorCuotaFinal.ToString();
             txtMeses.Text = mesesDiferido.ToString();
+
             //txtNombre.Text = nombre;
 
         }
+
+        private void CalcularCuotaFinal(){
+            valorCursoInicial = int.Parse(txtMonto.Text.ToString());
+            mesesDiferido=int.Parse(txtMeses.Text.ToString());
+
+            valorCursoSaldo = valorCurso - valorCursoInicial;
+            valorCuota = valorCursoSaldo / mesesDiferido;
+            valorCuotaFinal = valorCuota + ((valorCuota * valorInteres) / 100);
+
+            txtMontoSaldo.Text = valorCursoSaldo.ToString();
+            txtPagoMensual.Text = valorCuotaFinal.ToString();
+            txtMeses.Text = mesesDiferido.ToString();
+            txtPagoMensual.Text = valorCuotaFinal.ToString();
+        }
         private void btnCalcular_Clicked(object sender, EventArgs e)
         {
-            int montoI = int.Parse(txtMonto.Text);
-            int pagoM = int.Parse(txtPagoMensual.Text);
-
-            //P = 
-
-            //if ()
-            //{
-
-            //}
-
-
-
-
+            CalcularCuotaFinal();
 
         }
 
         private void btnGuardar_Clicked(object sender, EventArgs e)
-        {
-           string usuario1 = lblusuario.Text;
+        {   
+            
+            string usuario1 = lblusuario.Text;
             string nombre2 = txtNombre.Text;
-            Navigation.PushAsync(new Resumen(usuario1, nombre2));
+            Navigation.PushAsync(new Resumen(usuario1, nombre2,txtPagoMensual.Text));
         }
         private void txtMonto_TextChanged(object sender, TextChangedEventArgs e)
         {

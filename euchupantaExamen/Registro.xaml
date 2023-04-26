@@ -47,7 +47,7 @@
                            HorizontalTextAlignment="Center"
                            Grid.Row="1"
                            Grid.Column="1"
-                           TextChanged="txtMonto_TextChanged"
+                           Unfocused="txtMonto_TextChanged"
                        
                        />
                 <Label Text="Saldo" 
@@ -89,11 +89,11 @@
                             Clicked="btnCalcular_Clicked" 
                             Grid.Row="5" 
                             Grid.Column="0"/>
-                <Entry x:Name="txtcalcular"
+                <!--Entry x:Name="txtcalcular"
                            Placeholder="Calcular"
                        HorizontalOptions="Center"
                            Grid.Row="6"
-                           Grid.Column="1"/>
+                           Grid.Column="1"/>-->
                 <Button x:Name="btnGuardar"
                             Text="Guardar"
                             Clicked="btnGuardar_Clicked"
